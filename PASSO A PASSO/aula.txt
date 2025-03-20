@@ -1,0 +1,17 @@
+SE NÃO ESTAMOS USANDO NOSSO PC
+
+1 - Clonar o repositório
+
+2 - Entrar na pasta 
+
+3 - Criar um gitignore de qual linguagem esta USANDO
+
+4 - Agora usar comando para criar "SOLUÇÃO":                dotnet new sln --output MySolution(COLOQUE O NOME QUE QUISER PARA SUA SOLUÇÃO)
+
+5 - Agora entra na pasta "MySolution"
+
+6 - Dentro dela para criar uma API vazia do zero com este comando:      dotnet new web --name API (COLOQUE NO LUGAR DE API O NOME QUE QUISER)
+6.1 - Um outro comando para já deixar tudo criado é:                    dotnet new webapi --name API 
+
+7 - Agora dentro do projeto API adicione a sln com o mesmo nome:             dotnet sln add API
+
