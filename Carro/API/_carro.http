@@ -1,2 +1,22 @@
-### TESTE DA APLICAÇÃO - USAMOS ISSO POR CONTA DA EXTENSÃO REST CLIENT
-GET http://localhost:5033
+### Faz o teste 
+GET http://localhost:5033/api/carros/
+
+### Cadastrar carro
+POST http://localhost:5033/api/carros
+Content-Type: application/json
+
+{
+    "name": "Jaguar"
+}
+
+### Atualiza o carro
+PUT http://localhost:5033/api/carros/1
+Content-Type: application/json
+
+{
+    
+    "name": "Jaguar F-Type"
+}
+
+### Deleta o carro
+DELETE  http://localhost:5033/api/carros/2
