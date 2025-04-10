@@ -8,6 +8,7 @@ public class Carro{
     public string Name {get;set;}
 
     public DateTime CriadoEm {get;set;}
+    public Modelo? Modelo {get;set;}
 
     public Carro(){
         this.CriadoEm = DateTime.Now;

@@ -1,0 +1,5 @@
+### Lista de Modelos
+GET http://localhost:5033/api/modelos
+
+### Busca Modelos por ID
+GET http://localhost:5033/api/modelos/1

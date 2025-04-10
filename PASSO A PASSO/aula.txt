@@ -6,12 +6,14 @@ SE NÃO ESTAMOS USANDO NOSSO PC
 
 3 - Criar um gitignore de qual linguagem esta USANDO
 
-4 - Agora usar comando para criar "SOLUÇÃO":                dotnet new sln --output MySolution(COLOQUE O NOME QUE QUISER PARA SUA SOLUÇÃO)
+4 - Agora usar comando para criar "SOLUÇÃO":                
+- dotnet new sln --output MySolution(COLOQUE O NOME QUE QUISER PARA SUA SOLUÇÃO)
 
 5 - Agora entra na pasta "MySolution"
 
 6 - Dentro dela para criar uma API vazia do zero com este comando:      
 - dotnet new web --name API (COLOQUE NO LUGAR DE API O NOME QUE QUISER)
+
 6.1 - Um outro comando para já deixar tudo criado é:
 - dotnet new webapi --name API 
 
@@ -29,6 +31,69 @@ SE NÃO ESTAMOS USANDO NOSSO PC
 
 10 - Os comando por enquanto terminam aqui. ATUALIZANDO O BANCO DE DADOS:
 - dotnet ef database update
+
+
+
+AULA SOBRE SWAGGER
+Dentro de API roda o comando
+- dotnet Swashbuckle.AspNetCore
+
+Agora dentro de PROGRAM.cs:
+
+Acima de: var app = builder.Build();
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+Ainda dentro de PROGRAM.cs
+
+mas abaixo de: var app = builder.Build();
+
+app.UseSwagger();
+app.UseSwaggerUI();
+
+Depois roda dentro de API
+- dotnet run
+
+abre o localhost: e adiciona o (/swagger/index.html)
+
+- http://localhost:5033/swagger/index.html  
+
+
+Agora dentro de:    builder.Services.AddSwaggerGen()
+
+builder.Services.AddSwaggerGen(options =>
+{
+    options.EnableAnnotations();
+    options.SwaggerDoc("v1", new OpenApiInfo()
+    {
+        
+        Title = "Swagger Documentação Web API Carros",
+        Description = "EndPoints para gerenciar cadastro de carros",
+        Contact = new OpenApiContact(){
+            Name = "Jean Moreira",
+            Email = "jean.moreira@cs.up.edu.br"
+    },
+        License = new OpenApiLicense(){
+            Name = "MIT License",
+            Url = new Uri("https://opensource.org/licenses/MIT")
+        }
+    });
+    }
+);
+
+Se não tiver importado la em cima o USING, é necessário importar:
+using Microsoft.OpenApi.Models;   ISSO AQUI FAZ COM QUE VOCÊ CONSIGA VER A EVOLUÇÃO DO SEU PROJETO!
+
+Busca pela query
+
+
+
+
+
+
+
+
 
 
 

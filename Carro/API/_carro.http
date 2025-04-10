@@ -6,7 +6,10 @@ POST http://localhost:5033/api/carros
 Content-Type: application/json
 
 {
-    "name": "Jaguar"
+    "name": "Jaguar",
+    "modelo": {
+        "id": 1
+    }
 }
 
 ### Atualiza o carro
@@ -20,3 +23,5 @@ Content-Type: application/json
 
 ### Deleta o carro
 DELETE  http://localhost:5033/api/carros/2
+
+
